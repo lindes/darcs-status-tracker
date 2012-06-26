@@ -1,0 +1,24 @@
+#!/usr/bin/env sbcl --script
+
+; config example -- this is actually a script, really, but it serves
+; as a configuration.  We specify which outputs to send to, and which trees to view.
+
+(require :asdf)
+(require :com.daveltd.darcs-status-tracker)
+
+(in-package com.daveltd.darcs-status-tracker) ; TODO: or.... ?
+
+(darcs-status-tracker
+; one or more output specifications (if more than one supplied, multiple files will be created)
+
+      (:html "output.html" ; generates an HTML table, for viewing in a browser
+       :text "output.txt"      ; generates a table in plain ASCII text
+       :lisp "output.lisp") ; generates the lisp s-expressions used to generate each of the above
+
+; one or more paths to trees.  path, (path), or (path hostspec)
+; (hostspec is an ssh-friendly hostname, which may include usernames,
+; or be an entry from .ssh/config, or whatever)
+
+                        "~/src"
+                        ("~/src" "somehost")
+                        ("~someone/src" "otherhost"))
