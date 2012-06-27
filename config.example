@@ -21,4 +21,5 @@
 
                         "~/src"
                         ("~/src" "somehost")
-                        ("~someone/src" "otherhost"))
+                        ("~someone/src" "otherhost")
+                        ("~yet/another" "host" "yah"))
