@@ -8,6 +8,18 @@ The idea is to provide a sort of "dashboard view" into the status of
 mulitple trees, quite possibly representing multiple developers and/or
 multiple server environments, etc.
 
+## Status of this project:
+
+This project is still in its early development.  It doesn't actually
+do what it sets out to do yet.  You can, however, get it to fetch a
+bunch of XML files for all of your repos, and there's an XSLT file
+that you can use to generate a simple text file from each one (using,
+e.g., [xsltproc](http://xmlsoft.org/xslt/xsltproc2.html)), which you
+can then use existing diff tools with, which is a start.
+
+My main inspiration for doing further work on this has become
+irrelevant, so I may or may not finish getting it to the goal state,
+but it's something.
 
 ## Example of why this might matter:
 
